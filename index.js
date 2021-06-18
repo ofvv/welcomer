@@ -14,7 +14,7 @@ client.on('ready', async () => {
 client.handleWelcome = async function(member, channel) {
   try {
     if (!member || !channel) return;
-    const joinedusername = member.user.username.length > 11 ? `${member.user.username.substring(0, 11)}` : member.user.username;
+    const joinedusername = member.user.username.length > 11 ? member.user.username.substring(0, 11) : member.user.username;
     const canvas = Canvas.createCanvas(700, 250);
     const context = canvas.getContext('2d');
     context.font = '50px Sans';
