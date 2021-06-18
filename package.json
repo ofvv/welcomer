@@ -1,0 +1,19 @@
+{
+  "name": "welcomer",
+  "version": "1.0.1",
+  "description": "Sends a welcome image & embed when somebody joins a discord server!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "install": "npm i"
+  },
+  "keywords": ["discord.js", "discord", "welcome", "welcomer", "bot", "image", "canvas", "imagemanipulation", "api"],
+  "author": "ZiroCore",
+  "license": "ISC",
+  "dependencies": {
+    "blueapi.js": "0.0.4",
+    "canvas": "^2.8.0",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0"
+  }
+}
