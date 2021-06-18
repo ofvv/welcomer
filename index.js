@@ -13,8 +13,7 @@ client.on('ready', async () => {
 
 client.handleWelcome = async function(member, channel) {
   try {
-    if (!member || !channel) return;
-    if (member.user.bot) return;
+    if (!member || !channel || member.user.bot) return;
     const joinedusername = member.user.username.length > 11 ? member.user.username.substring(0, 11) : member.user.username;
     const canvas = Canvas.createCanvas(700, 250);
     const context = canvas.getContext('2d');
@@ -51,6 +50,7 @@ client.handleWelcome = async function(member, channel) {
 }
 
 client.on('guildMemberAdd', async member => {
+  if (member.guild.id != client.channels.cache.get(process.env.CHANNELID).guild.id) return;
   client.handleWelcome(member, client.channels.cache.get(process.env.CHANNELID))
 })
 
